@@ -65,4 +65,4 @@ COMPILE_OPTIONS = [ ' -O' COMPILE_OPTIONS ];
 %COMPILE_OPTIONS = [ ' -v' COMPILE_OPTIONS ];
 
 disp('Compiling polyroots...')
-eval(['mex ', COMPILE_OPTIONS, ' polyroots.c',' cpoly.c',' rpoly.c',' pow_di.c']);
+eval(['mex ', COMPILE_OPTIONS, ' -Ilibf2c', ' polyroots.c',' acm419/cpoly.c',' acm439/rpoly.c',' libf2c/pow_di.c']);
