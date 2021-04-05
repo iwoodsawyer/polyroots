@@ -12,9 +12,9 @@
  *
  * references;
  *   - Jenkins, M. A. and Traub, J. F. (1972), Algorithm 419: Zeros of a
- *     Complex Polynomial, Comm. ACM, 15, 97–99. 
+ *     Complex Polynomial, Comm. ACM, 15, 97â€“99. 
  *   - Jenkins, M. A. (1975), Algorithm 493: Zeros of a Real Polynomial, 
- *     ACM TOMS, 1, 178–189.
+ *     ACM TOMS, 1, 178â€“189.
  */
 
 #include "mex.h"
@@ -24,8 +24,8 @@
 
 void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 {
-    size_t m, n;
-    ptrdiff_t degree, fail;
+    mwSize m, n;
+    mwSignedIndex degree, fail;
     double *Cpr, *Cpi,*Zpr, *Zpi;
     
     /* check for proper number of arguments */
