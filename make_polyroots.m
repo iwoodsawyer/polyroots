@@ -21,7 +21,7 @@ elseif strcmpi('PCWIN', computer) || strcmpi('PCWIN64', computer)
         if MATLAB_VERSION < 7.06
             MANUFACTURER = 'lcc';
         else
-            cc = mex.getCompilerConfigurations('Any','Selected');
+            cc = mex.getCompilerConfigurations('C','Selected');
             MANUFACTURER = cc.Manufacturer;
         end
         switch lower(MANUFACTURER)
@@ -35,7 +35,7 @@ elseif strcmpi('PCWIN', computer) || strcmpi('PCWIN64', computer)
                 disp('Try "mex -setup"!')
         end
     else
-        cc = mex.getCompilerConfigurations('Any','Selected');
+        cc = mex.getCompilerConfigurations('C','Selected');
         MANUFACTURER = cc.Manufacturer;
         switch lower(MANUFACTURER)
             case {'microsoft'}
